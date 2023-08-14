@@ -1,0 +1,25 @@
+.brands{
+    margin-block-end: 100px;
+}
+
+.brands__title{
+    color: #000;
+    text-align: center;
+    font-family: Playfair Display;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px; 
+    margin-block-end: 39px;
+}
+
+.brands__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10ch), 1fr));
+    gap: 65px; 
+    place-items: center;
+}
+
+.list__item{
+    list-style: none;
+}
