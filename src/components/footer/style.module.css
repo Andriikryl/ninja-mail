@@ -1,0 +1,30 @@
+.footer{
+    margin-block: 70px;
+}
+.footer__box{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.list__box{
+    max-width: 503px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 1ch), 1fr));
+    gap: 47px; 
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list__item{
+    list-style: none;
+    color: #000;
+    font-family: Raleway;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 115.789% */
+}
