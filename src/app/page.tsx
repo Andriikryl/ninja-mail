@@ -1,5 +1,6 @@
 import Customers from "@/components/sections/customers/Customers";
 import Hero from "@/components/sections/hero/Hero";
+import Learn from "@/components/sections/learn/Learn";
 import Source from "@/components/sections/source/Source";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Customers />
       <Source />
+      <Learn />
     </>
   );
 }

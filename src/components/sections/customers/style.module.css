@@ -1,5 +1,7 @@
 .customers{
     padding-block: 100px;
+    position: relative;
+    z-index: 2;
 }
 .customers__learn{
     padding-block: 200px;
