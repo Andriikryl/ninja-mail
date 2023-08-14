@@ -1,0 +1,33 @@
+.start{
+    background: #4BA87D;
+    padding-block: 80px;
+}
+.start__title{
+    color: #FFF;
+    text-align: center;
+    font-family: Playfair Display;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 80px;
+}
+
+.start__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.start__btn{
+    color: #4BA87D;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 25px; /* 119.048% */
+    letter-spacing: 1.05px;
+    background: #FFF;
+}
