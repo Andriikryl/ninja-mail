@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.css";
 import { Container } from "@/components/container/Container";
 import { Button } from "@/components/button/Button";
-import DecorateGroup from "./DecorateGroup";
+import Gravity from "@/components/gravity/Gravity";
 
 export default function Hero() {
   return (
@@ -15,11 +15,14 @@ export default function Hero() {
             just a few clicks.
           </p>
           <div className={style.flex__group}>
-            <Button>TRY NOW</Button>
-            <Button>GET A DEMO</Button>
+            <Gravity>
+              <Button>GET A DEMO</Button>
+            </Gravity>
+            <Gravity>
+              <Button>TRY NOW</Button>
+            </Gravity>
           </div>
         </div>
-        <DecorateGroup />
       </Container>
     </section>
   );

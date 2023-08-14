@@ -1,0 +1,26 @@
+.customers{
+    padding-block: 100px;
+}
+.customers__learn{
+    padding-block: 200px;
+    background-image: url("/customers/custom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 944px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: auto;
+}
+
+.customers__title{
+    color: #FFF;
+    font-family: Playfair Display;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 80px; 
+    margin-block-end: 61px;
+}
