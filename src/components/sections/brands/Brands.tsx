@@ -3,6 +3,7 @@ import style from "./style.module.css";
 import { Container } from "@/components/container/Container";
 import Image from "next/image";
 import Gravity from "@/components/gravity/Gravity";
+import MotionSection from "@/components/motionSection/MotionSection";
 
 const data = [
   {
@@ -44,7 +45,7 @@ const data = [
 
 export default function Brands() {
   return (
-    <section className={style.brands}>
+    <MotionSection className={style.brands}>
       <Container>
         <h4 className={style.brands__title}>
           All the best brands already use us.
@@ -66,6 +67,6 @@ export default function Brands() {
           })}
         </ul>
       </Container>
-    </section>
+    </MotionSection>
   );
 }

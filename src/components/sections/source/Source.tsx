@@ -4,10 +4,11 @@ import ImageOne from "public/customers/photo-one.jpg";
 import ImageTwo from "public/customers/photo-two.jpg";
 import Image from "next/image";
 import style from "./style.module.css";
+import MotionSection from "@/components/motionSection/MotionSection";
 
 export default function Source() {
   return (
-    <section className={style.source}>
+    <MotionSection className={style.source}>
       <Container className={style.source__container}>
         <div className={style.source__box}>
           <article className={style.card}>
@@ -50,6 +51,6 @@ export default function Source() {
           </div>
         </div>
       </Container>
-    </section>
+    </MotionSection>
   );
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import style from "./style.module.css";
 import { Button } from "@/components/button/Button";
+import MotionSection from "@/components/motionSection/MotionSection";
 
 const data = [
   {
@@ -36,7 +37,7 @@ const data = [
 
 export default function Learn() {
   return (
-    <section className={style.learn}>
+    <MotionSection className={style.learn}>
       <Container>
         <ul className={style.learn__list}>
           {data.map((item) => {
@@ -77,6 +78,6 @@ export default function Learn() {
           <Button>JOIN OUR LIST</Button>
         </form>
       </Container>
-    </section>
+    </MotionSection>
   );
 }

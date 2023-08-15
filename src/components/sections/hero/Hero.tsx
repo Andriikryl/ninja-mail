@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./style.module.css";
 import { Container } from "@/components/container/Container";
 import { Button } from "@/components/button/Button";
