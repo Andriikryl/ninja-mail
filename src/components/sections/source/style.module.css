@@ -25,6 +25,17 @@
     top: 81px;
 }
 
+@media (max-width:666px) {
+    .card:nth-child(2){
+        position: relative;
+        top: 0px;
+    }   
+    .flex__group{
+        max-width: 500px;
+        text-align: center;
+    }
+}
+
 .card__padding{
     padding-block: 24px;
     padding-inline: 30px;
@@ -62,7 +73,7 @@
 .source__title{
     color: #000;
     font-family: Playfair Display;
-    font-size: 44px;
+    font-size: clamp(24px, 5vw + 1rem, 44px);
     font-style: normal;
     font-weight: 900;
     line-height: 48px; 

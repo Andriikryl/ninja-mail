@@ -4,14 +4,22 @@
 .footer__box{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 100px;
 }
 
 .list__box{
-    max-width: 503px;
+    flex-grow: 1;
+    max-width: 603px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 1ch), 1fr));
-    gap: 47px; 
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10ch), 1fr));
+    gap: 10px; 
+}
+
+@media (max-width:550px) {
+        .list__box{
+            grid-template-columns: repeat(2, 1fr);
+        }
 }
 .list{
     display: flex;

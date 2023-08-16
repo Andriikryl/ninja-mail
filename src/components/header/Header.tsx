@@ -1,9 +1,12 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { Container } from "../container/Container";
-import Logo from "public/logo/NinjaMail Logo.svg";
+import Logo from "public/logo/logo.svg";
 import style from "./style.module.css";
 import Image from "next/image";
 import { Button } from "../button/Button";
+import BurgerButton from "./BurgerButton";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -24,30 +27,75 @@ const data = [
   },
 ];
 
+const XAnimations = {
+  hidden: { opacity: 0, x: 400 },
+  visible: (custom: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: custom * 0.2, duration: 0.8 },
+  }),
+};
+const XAnimationsOposite = {
+  hidden: { opacity: 0, x: -300 },
+  visible: (custom: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: custom * 0.2, duration: 0.8 },
+  }),
+};
+
 export default function Header() {
+  const [activeState, setActiveState] = useState(false);
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) html.classList.toggle("dis-scroll", activeState);
+  }, [activeState]);
+
+  const handleClick = () => {
+    setActiveState((prev) => !prev);
+  };
   return (
-    <header className={style.header}>
+    <motion.header
+      className={style.header}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+    >
       <Container>
         <div className={style.flex__group}>
-          <a className={style.logo} href="#">
-            <Image src={Logo} width={269} height={81} alt="Ninja-mail" />
-          </a>
-          <nav className={style.nav}>
+          <motion.a
+            className={style.logo}
+            href="#"
+            variants={XAnimationsOposite}
+            custom={1}
+          >
+            <Image src={Logo} width={150} height={81} alt="Ninja-mail" />
+          </motion.a>
+          <nav
+            className={`${style.nav} ${activeState ? style.menu_active : ""}`}
+          >
             <ul className={style.nav__list}>
               {data.map((item) => {
                 return (
-                  <li className={style.list__item} key={item.id}>
+                  <motion.li
+                    className={style.list__item}
+                    key={item.id}
+                    variants={XAnimations}
+                    custom={item.id}
+                  >
                     <a className={style.item__link} href="#">
                       {item.title}
                     </a>
-                  </li>
+                  </motion.li>
                 );
               })}
             </ul>
             <Button>SIGN UP FREE</Button>
           </nav>
+          <BurgerButton onClick={handleClick} activeState={activeState} />
         </div>
       </Container>
-    </header>
+    </motion.header>
   );
 }

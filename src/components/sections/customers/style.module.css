@@ -20,9 +20,15 @@
 .customers__title{
     color: #FFF;
     font-family: Playfair Display;
-    font-size: 60px;
+    font-size: clamp(24px, 5vw + 1rem, 60px);
     font-style: normal;
-    font-weight: 900;
-    line-height: 80px; 
+    font-weight: 900; 
+    line-height: clamp(44px, 5vw + 1rem, 80px);
     margin-block-end: 61px;
+}
+
+@media (max-width:640px) {
+    .customers__title{
+        text-align: center;
+    }
 }

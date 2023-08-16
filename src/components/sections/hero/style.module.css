@@ -14,7 +14,7 @@
 .hero__title{
     color: #000;
     font-family: Playfair Display;
-    font-size: 59px;
+    font-size: clamp(24px, 5vw + 1rem, 59px );
     font-style: normal;
     font-weight: 900;
     line-height: 71px; 
@@ -167,4 +167,18 @@
     position: absolute;
     bottom: -100px;
     left: -100px;
+}
+
+@media (max-width: 900px) {
+    .hero{
+        background-position: center;
+    }
+    .hero__box{
+        margin-inline-start: 0px;
+        text-align: center;
+    }
+    .flex__group{
+        justify-content: center;
+        gap: 20px;
+    }
 }
